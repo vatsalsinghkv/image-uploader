@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* ##4F4F4F */
+    --color-text: theme(colors.gray.700);
+    --color-gray-1: theme(colors.gray.400);
+    --color-gray-2: theme(colors.gray.500);
+    --color-gray-3: theme(colors.gray.600);
+    --color-text-inverse: theme(colors.white);
+    --color-grad-1: theme(colors.fuchsia.500);
+    --color-grad-2: theme(colors.indigo.500);
+  }
+
+  body {
+    @apply min-h-screen lg:p-32 text-text;
+  }
+}
+
+.bg-gradient {
+  @apply bg-gradient-to-br from-grad-1 to-grad-2 bg-no-repeat;
+}
